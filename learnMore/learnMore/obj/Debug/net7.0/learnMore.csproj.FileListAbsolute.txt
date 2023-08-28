@@ -1,0 +1,14 @@
+D:\codeCSharp\ex\learnMore\learnMore\bin\Debug\net7.0\learnMore.exe
+D:\codeCSharp\ex\learnMore\learnMore\bin\Debug\net7.0\learnMore.deps.json
+D:\codeCSharp\ex\learnMore\learnMore\bin\Debug\net7.0\learnMore.runtimeconfig.json
+D:\codeCSharp\ex\learnMore\learnMore\bin\Debug\net7.0\learnMore.dll
+D:\codeCSharp\ex\learnMore\learnMore\bin\Debug\net7.0\learnMore.pdb
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.GeneratedMSBuildEditorConfig.editorconfig
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.AssemblyInfoInputs.cache
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.AssemblyInfo.cs
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.csproj.CoreCompileInputs.cache
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.dll
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\refint\learnMore.dll
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.pdb
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\learnMore.genruntimeconfig.cache
+D:\codeCSharp\ex\learnMore\learnMore\obj\Debug\net7.0\ref\learnMore.dll
