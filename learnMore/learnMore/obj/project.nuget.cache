@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OsWgdnxtd9VORCIvch8UkwaSmojAHn+GlIEItyPFQTWUVmAeoW9KdO5NLYx2PMTZX/Q8fMZU/kaxSTIPwQEl0A==",
+  "dgSpecHash": "R1MZ/gLl/BMmhcUgzpA9wr/YXtDi3zYDMEBZYR+k3unJmOH0NSakOPfyPc/3gI8qZZyvI+4ZHh9rbwvJ3R2TrQ==",
   "success": true,
-  "projectFilePath": "D:\\codeCSharp\\ex\\learnMore\\learnMore\\learnMore.csproj",
+  "projectFilePath": "D:\\codeCSharp\\learnMore\\learnMore\\learnMore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

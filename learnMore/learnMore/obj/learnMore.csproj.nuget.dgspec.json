@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\codeCSharp\\ex\\learnMore\\learnMore\\learnMore.csproj": {}
+    "D:\\codeCSharp\\learnMore\\learnMore\\learnMore.csproj": {}
   },
   "projects": {
-    "D:\\codeCSharp\\ex\\learnMore\\learnMore\\learnMore.csproj": {
+    "D:\\codeCSharp\\learnMore\\learnMore\\learnMore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\codeCSharp\\ex\\learnMore\\learnMore\\learnMore.csproj",
+        "projectUniqueName": "D:\\codeCSharp\\learnMore\\learnMore\\learnMore.csproj",
         "projectName": "learnMore",
-        "projectPath": "D:\\codeCSharp\\ex\\learnMore\\learnMore\\learnMore.csproj",
+        "projectPath": "D:\\codeCSharp\\learnMore\\learnMore\\learnMore.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\codeCSharp\\ex\\learnMore\\learnMore\\obj\\",
+        "outputPath": "D:\\codeCSharp\\learnMore\\learnMore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

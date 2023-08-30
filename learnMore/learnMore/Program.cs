@@ -1,36 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
 
+public delegate void SuKienNhapSo (int x);
+
+class DuLieuNhap : EventArgs {
+    public int data {set; get;}
+    public DuLieuNhap (int x) => data = x;
+}
+
+class UserInput{
+
+    // public SuKienNhapSo suKienNhapSo { set; get;}
+    //public event SuKienNhapSo suKienNhapSo; //! event - ko thuc hien phep gan
+
+    //~delegate void KIEU(object? sender, EventArgs e)
+    public event EventHandler suKienNhapSo; 
+
+    public void Input(){
+        do{
+            Console.Write("Nhap so: ");
+            string s = Console.ReadLine();
+            int i = Int32.Parse(s);
+            // suKienNhapSo?.Invoke(i);
+            suKienNhapSo?.Invoke(this, new DuLieuNhap(i));
+        }
+        while(true);
+    }
+}
+
+class TinhCan{
+
+    public void Sub(UserInput input){
+        input.suKienNhapSo += Can;  //! += not =
+    }
+
+    public void Can(object sender, EventArgs e){
+        DuLieuNhap duLieuNhap = (DuLieuNhap)e;
+        int i = duLieuNhap.data;
+        Console.WriteLine($"Can: {Math.Sqrt(i)}");
+    }
+
+    // public void Can (int i){
+    //     Console.WriteLine($"Can: {Math.Sqrt(i)}");
+    // }
+}
+
 class Program
 {
-    class Product{
-        public string Name{get; set; }
-        public double Price { get; set; }
-        public int ID { get; set; }
-        public string Origin { get; set; }
-    }
     static void Main(string[] args){
-        SortedList<string, Product> products = new SortedList<string, Product>();
-        products["sanpham1"] = new Product() {Name = "san pham1", Price = 1000, Origin = "sanpham1"};
-        products["sanpham2"] = new Product() {Name = "san pham2", Price = 1200, Origin = "sanpham2"};
-        products.Add("sanpham3", new Product() {Name = "san pham3", Price = 1100, Origin = "sanpham3"});
 
-        var p = products["sanpham2"];
-        Console.WriteLine(p.Name);
+        Console.CancelKeyPress += (sender, e) => {
+            Console.WriteLine();
+            Console.WriteLine("Exiting");
+        };
 
-        // var keys = products.Keys;
-        // var values = products.Values;
-        // foreach (var key in keys) {
-        //     var product = products[key];
-        //     Console.WriteLine(product.Name);
-        // }
+        UserInput userInput = new UserInput();
 
-        foreach (KeyValuePair<string,Product> i in products) {
-            var key = i.Key;
-            var value = i.Value;
-            Console.WriteLine($"{key} - {value.Name}");
-        }
-        // products.Remove("sanpham123");
-        // products.RemoveAt(0);
+        // userInput.suKienNhapSo += x =>{
+        //     Console.WriteLine("Ban vua nhap so: " + x);
+        // };
+        userInput.suKienNhapSo += (sender, e) =>{
+            DuLieuNhap dulieunhap = (DuLieuNhap)e;
+            Console.WriteLine("Ban vua nhap so: " + dulieunhap.data);
+        };
+
+        TinhCan so = new TinhCan ();
+        so.Sub(userInput);
+
+        userInput.Input();
     }
 }
