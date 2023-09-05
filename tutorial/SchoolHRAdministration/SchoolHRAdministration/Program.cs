@@ -75,7 +75,7 @@ namespace SchoolHRAdministration
             switch (employeeType)
             {
                 case EmployeeType.Teacher:
-                    employee = new Teacher { Id = id, FirstName = firstName, LastName = lastName, Salary = salary };
+                    employee = FactoryPattern<IEmployee, Teacher>.GetInstance();
                     break;
                 case EmployeeType.HeadOfDepartment:
                     employee = new HeadOfDepartment { Id = id, FirstName = firstName, LastName = lastName, Salary = salary };
@@ -88,6 +88,17 @@ namespace SchoolHRAdministration
                     break;
                 default:
                     break;
+            }
+            if(employee != null)
+            {
+                employee.Id = id;
+                employee.FirstName = firstName;
+                employee.LastName = lastName;
+                employee.Salary = salary;
+            }
+            else
+            {
+                throw new NullReferenceException();
             }
             return employee;
         }
