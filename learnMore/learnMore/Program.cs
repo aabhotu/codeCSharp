@@ -1,72 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public delegate void SuKienNhapSo (int x);
-
-class DuLieuNhap : EventArgs {
-    public int data {set; get;}
-    public DuLieuNhap (int x) => data = x;
-}
-
-class UserInput{
-
-    // public SuKienNhapSo suKienNhapSo { set; get;}
-    //public event SuKienNhapSo suKienNhapSo; //! event - ko thuc hien phep gan
-
-    //~delegate void KIEU(object? sender, EventArgs e)
-    public event EventHandler suKienNhapSo; 
-
-    public void Input(){
-        do{
-            Console.Write("Nhap so: ");
-            string s = Console.ReadLine();
-            int i = Int32.Parse(s);
-            // suKienNhapSo?.Invoke(i);
-            suKienNhapSo?.Invoke(this, new DuLieuNhap(i));
-        }
-        while(true);
-    }
-}
-
-class TinhCan{
-
-    public void Sub(UserInput input){
-        input.suKienNhapSo += Can;  //! += not =
-    }
-
-    public void Can(object sender, EventArgs e){
-        DuLieuNhap duLieuNhap = (DuLieuNhap)e;
-        int i = duLieuNhap.data;
-        Console.WriteLine($"Can: {Math.Sqrt(i)}");
-    }
-
-    // public void Can (int i){
-    //     Console.WriteLine($"Can: {Math.Sqrt(i)}");
-    // }
-}
 
 class Program
 {
-    static void Main(string[] args){
+    static void DoSomeThing(int seconds, string message, ConsoleColor color)
+    {
+        //Thread.Sleep(seconds);
+        Console.ForegroundColor = color;
+        Console.WriteLine($"{message} ...... Start");
+        Console.ResetColor();
 
-        Console.CancelKeyPress += (sender, e) => {
-            Console.WriteLine();
-            Console.WriteLine("Exiting");
-        };
+        for(int i = 1; i <= seconds; i++)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine($"{message} {i}");
+            Console.ResetColor();
 
-        UserInput userInput = new UserInput();
+            Thread.Sleep( 1000 );
+        }
+        Console.ForegroundColor = color;
+        Console.WriteLine($"{message} ..... End");
+        Console.ResetColor();
+    }
 
-        // userInput.suKienNhapSo += x =>{
-        //     Console.WriteLine("Ban vua nhap so: " + x);
-        // };
-        userInput.suKienNhapSo += (sender, e) =>{
-            DuLieuNhap dulieunhap = (DuLieuNhap)e;
-            Console.WriteLine("Ban vua nhap so: " + dulieunhap.data);
-        };
+    static async Task Task2()
+    {
+        Task t2 = new Task(
+            () => {
+                DoSomeThing(4, "Thao", ConsoleColor.Blue);
+            }
+         );
+        t2.Start();
+        await t2;
+        Console.WriteLine("Done t2");
+    }
 
-        TinhCan so = new TinhCan ();
-        so.Sub(userInput);
+    static async Task Task3()
+    {
+        Task t3 = new Task(
+           (object ob) => {
+               string tentacvu = (string)ob;
+               DoSomeThing(5, tentacvu, ConsoleColor.Yellow);
+           }
+        , "Thuy");
+        t3.Start();
+        await t3;
+        Console.WriteLine("Done t3");
+    }
 
-        userInput.Input();
+    static void Main(string[] args)
+    {
+        Task t2 = Task2();
+        Task t3 = Task3();
+       
+
+        //DoSomeThing(3, "tt", ConsoleColor.Yellow);
+        //DoSomeThing(4, "hh", ConsoleColor.Blue);
+        DoSomeThing(6, "Abu", ConsoleColor.Magenta);
     }
 }
