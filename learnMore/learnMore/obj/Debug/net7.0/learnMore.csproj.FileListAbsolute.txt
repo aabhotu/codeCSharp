@@ -26,3 +26,9 @@ D:\codeCSharp\learnMore\learnMore\obj\Debug\net7.0\refint\learnMore.dll
 D:\codeCSharp\learnMore\learnMore\obj\Debug\net7.0\learnMore.pdb
 D:\codeCSharp\learnMore\learnMore\obj\Debug\net7.0\learnMore.genruntimeconfig.cache
 D:\codeCSharp\learnMore\learnMore\obj\Debug\net7.0\ref\learnMore.dll
+D:\codeCSharp\learnMore\learnMore\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+D:\codeCSharp\learnMore\learnMore\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\codeCSharp\learnMore\learnMore\obj\Debug\net7.0\learnMore.csproj.AssemblyReference.cache
+D:\codeCSharp\learnMore\learnMore\obj\Debug\net7.0\learnMore.csproj.CopyComplete
+D:\codeCSharp\learnMore\learnMore\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\codeCSharp\learnMore\learnMore\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
