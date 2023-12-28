@@ -1,0 +1,10 @@
+{
+  "section1": {
+    "key1": "value1",
+    "key2": "value2"
+  },
+  "MyServiceOption": {
+    "data1": "Thao ne",
+    "data2": 2323
+  }
+}
