@@ -18,7 +18,7 @@ namespace Repository
         {
             get
             {
-                if(Owner == null)
+                if(_owner == null)
                 {
                     _owner = new OwnerRepository(_repoContext);
                 }
@@ -29,12 +29,13 @@ namespace Repository
         {
             get
             {
-                if(Account == null)
+                if(_account == null)
                 {
                     _account = new AccountRepository(_repoContext);
                 }
                 return _account;
             }
+            set { _account = value; }
         }
         public RepositoryWrapper (RepositoryContext repositoryContext)
         {
