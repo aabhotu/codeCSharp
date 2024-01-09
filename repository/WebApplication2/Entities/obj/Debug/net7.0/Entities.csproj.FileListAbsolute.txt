@@ -1,0 +1,12 @@
+D:\codeCSharp\repository\WebApplication2\Entities\bin\Debug\net7.0\Entities.deps.json
+D:\codeCSharp\repository\WebApplication2\Entities\bin\Debug\net7.0\Entities.dll
+D:\codeCSharp\repository\WebApplication2\Entities\bin\Debug\net7.0\Entities.pdb
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.dll
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\refint\Entities.dll
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\Entities.pdb
+D:\codeCSharp\repository\WebApplication2\Entities\obj\Debug\net7.0\ref\Entities.dll

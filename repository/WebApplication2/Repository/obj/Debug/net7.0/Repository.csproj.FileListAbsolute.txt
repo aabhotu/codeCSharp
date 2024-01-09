@@ -1,0 +1,17 @@
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Repository.deps.json
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Repository.dll
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Repository.pdb
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Contracts.dll
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Entities.dll
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Contracts.pdb
+D:\codeCSharp\repository\WebApplication2\Repository\bin\Debug\net7.0\Entities.pdb
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.csproj.AssemblyReference.cache
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.AssemblyInfoInputs.cache
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.AssemblyInfo.cs
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.csproj.CoreCompileInputs.cache
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.csproj.CopyComplete
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.dll
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\refint\Repository.dll
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\Repository.pdb
+D:\codeCSharp\repository\WebApplication2\Repository\obj\Debug\net7.0\ref\Repository.dll
