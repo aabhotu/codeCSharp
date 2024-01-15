@@ -18,22 +18,22 @@ namespace Repository
         {
             get
             {
-                if(_owner == null)
+                if(_owner != null)
                 {
-                    _owner = new OwnerRepository(_repoContext);
+                    return _owner;
                 }
-                return _owner;
+                    return new OwnerRepository(_repoContext);
             }
         }
         public IAccountRepository Account
         {
             get
             {
-                if(_account == null)
+                if(_account != null)
                 {
-                    _account = new AccountRepository(_repoContext);
+                    return _account;
                 }
-                return _account;
+                return new AccountRepository(_repoContext);
             }
             set { _account = value; }
         }

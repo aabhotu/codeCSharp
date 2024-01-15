@@ -13,5 +13,7 @@ namespace Repository
     {
         public AccountRepository(RepositoryContext repositoryContext)
             : base(repositoryContext){ }
+        public IEnumerable<Account> AccountsByOwner(Guid ownerId)
+            => FindByCondition(ac => ac.OwnerId.Equals(ownerId)).ToList();
     }
 }

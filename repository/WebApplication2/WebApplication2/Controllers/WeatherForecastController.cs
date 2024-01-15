@@ -16,7 +16,7 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public IEnumerable<string> Get() 
         {
-            var domicAccount = _repoWrapper.Account.FindByCondition(x => x.AccountType.Equals("Domics"));
+            //var domicAccount = _repoWrapper.Account.FindByCondition(x => x.AccountType.Equals("Domics"));
             var owner = _repoWrapper.Owner.FindAll();
             return new string[] { "value1", "value2" };
         }
