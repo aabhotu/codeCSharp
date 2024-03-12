@@ -11,7 +11,11 @@ builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigMySqlConnection(builder.Configuration);
 builder.Services.ConfigureRepositoryManager();
 builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<RepositoryContext>();
+builder.Services.AddIdentity<User, IdentityRole>(opt =>
+{
+    opt.Password.RequiredLength = 7;
+    opt.User.RequireUniqueEmail = true;
+}).AddEntityFrameworkStores<RepositoryContext>();
 
 builder.Services.AddControllers();
 
