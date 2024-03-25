@@ -2,6 +2,7 @@ using CompanyEmployees.Entities.Models;
 using CompanyEmployees.Extensions;
 using CompanyEmployees.JwtFeatures;
 using CompanyEmployees.Repository;
+using EmailService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -41,6 +42,12 @@ builder.Services.AddAuthentication(opt =>
     };
 });
 builder.Services.AddScoped<JwtHandler>();
+
+var emailConfig = builder.Configuration
+    .GetSection("EmailConfiguration")
+    .Get<EmailConfiguration>();
+builder.Services.AddSingleton(emailConfig);
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 builder.Services.AddControllers();
 

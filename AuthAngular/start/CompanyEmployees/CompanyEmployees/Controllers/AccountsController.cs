@@ -2,6 +2,7 @@
 using CompanyEmployees.Entities.DataTransferObjects;
 using CompanyEmployees.Entities.Models;
 using CompanyEmployees.JwtFeatures;
+using EmailService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,10 +16,12 @@ namespace CompanyEmployees.Controllers
         private readonly UserManager<User> _userManager;
         private readonly IMapper _mapper;
         private JwtHandler _jwtHandler;
-        public AccountsController(UserManager<User> userManager, IMapper mapper, JwtHandler jwthandler) {
+        private readonly IEmailSender _emailSender;
+        public AccountsController(UserManager<User> userManager, IMapper mapper, JwtHandler jwthandler, IEmailSender emailSender) {
             _userManager = userManager;
             _mapper = mapper;
             _jwtHandler = jwthandler;
+            _emailSender = emailSender;
         }
         [HttpPost("Registration")]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
