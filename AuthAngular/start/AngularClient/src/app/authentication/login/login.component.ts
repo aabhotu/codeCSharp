@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, FormControlName, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthResponseDto } from 'src/app/_interfaces/response/authResponseDto.model';
 import { UserForAuthenticationDto } from 'src/app/_interfaces/user/userForAuthenticationDto.model';
@@ -13,16 +13,16 @@ import { AuthenticationService } from 'src/app/shared/services/authentication.se
 })
 export class LoginComponent implements OnInit {
   private returnUrl: string
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
   errorMessage: string ='';
   showError: boolean;
 
   constructor(private authService: AuthenticationService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      username: new FormControl("", [Validators.required]),
-      password: new FormControl("", [Validators.required])
+    this.loginForm = new UntypedFormGroup({
+      username: new UntypedFormControl("", [Validators.required]),
+      password: new UntypedFormControl("", [Validators.required])
     })
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/'
   }

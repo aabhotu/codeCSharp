@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormControl, UntypedFormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserForRegistrationDto } from "src/app/_interfaces/user/userForRegistrationDto.model";
 import { PasswordConfirmationValidatorService } from "src/app/shared/custom-validators/password-confirmation-validator.service";
@@ -13,19 +13,19 @@ import { AuthenticationService } from "src/app/shared/services/authentication.se
 })
 
 export class RegisterUserComponent implements OnInit {
-    registerForm: FormGroup;
+    registerForm: UntypedFormGroup;
     public errorMessage: string= '';
     public showError: boolean;
 
     constructor(private authService: AuthenticationService,private passConfValidator: PasswordConfirmationValidatorService, private router: Router){}
     
     ngOnInit(): void {
-        this.registerForm = new FormGroup({
-            firstName: new FormControl(''),
-            lastName: new FormControl(''),
-            email: new FormControl('', [Validators.required, Validators.email]),
-            password: new FormControl('', [Validators.required]),
-            confirm: new FormControl('')
+        this.registerForm = new UntypedFormGroup({
+            firstName: new UntypedFormControl(''),
+            lastName: new UntypedFormControl(''),
+            email: new UntypedFormControl('', [Validators.required, Validators.email]),
+            password: new UntypedFormControl('', [Validators.required]),
+            confirm: new UntypedFormControl('')
         });
         this.registerForm.get('confirm').setValidators([Validators.required,
             this.passConfValidator.validateConfirmPassword(this.registerForm.get('password'))]);
