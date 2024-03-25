@@ -18,6 +18,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddIdentity<User, IdentityRole>(opt =>
 {
     opt.Password.RequiredLength = 7;
+    opt.Password.RequireDigit = false;
     opt.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<RepositoryContext>();
 

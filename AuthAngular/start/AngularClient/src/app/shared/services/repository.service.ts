@@ -17,4 +17,8 @@ export class RepositoryService {
   private createCompleteRoute = (route: string, envAddress: string) => {
     return `${envAddress}/${route}`;
   }
+
+  public getClaims = (route: string) => {
+    return this.http.get(this.createCompleteRoute(route, this.envUrl.urlAddress));
+  }
 }
