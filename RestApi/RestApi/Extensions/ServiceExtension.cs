@@ -11,7 +11,6 @@ namespace RestApi.Extensions
         public static void ConfigMySqlConnection(this IServiceCollection services, IConfiguration config)
         {
             var connection = config["ConnectionStrings:DatabaseConnection"];
-            //var connection = config.GetConnectionString("DatabaseConnection");
             services.AddDbContext<RepositoryContext>(o => o.UseMySql(connection,
                MySqlServerVersion.LatestSupportedServerVersion
              ));
